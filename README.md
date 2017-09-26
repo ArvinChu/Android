@@ -1,3 +1,2 @@
 # Android
-for android code
-commit to the FfmpegSample project.
+- commit to the FfmpegSample project.
