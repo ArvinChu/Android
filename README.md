@@ -1,2 +1,2 @@
 # Android
-- commit to the FfmpegSample project.
+- commit to the [FfmpegSample](https://github.com/ArvinChu/Android/tree/master/FfmpegSample) project.
