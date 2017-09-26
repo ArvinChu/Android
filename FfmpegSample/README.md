@@ -216,7 +216,7 @@ LOCAL_MODULE := swscale
 LOCAL_SRC_FILES := $(THIRD_LIB_DIR)/libswscale.a
 include $(PREBUILT_STATIC_LIBRARY)
 
-############# 编译Smaple ##################
+############# 编译Sample ##################
 include $(CLEAR_VARS)
 # 库文件名称
 LOCAL_MODULE    := FfmpegSample
@@ -240,7 +240,7 @@ LOCAL_SHARED_LIBRARIES += pthread
 # 表示编译成动态库		
 include $(BUILD_SHARED_LIBRARY)
 ```
-4. 编写demo代码
+4. 编写demo代码<br>
 FfmpegSample.h
 ```c
 /*
