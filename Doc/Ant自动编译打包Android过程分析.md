@@ -127,7 +127,18 @@ build.xml：Ant默认构建文件
 这里我们重点关注两点：<br>
 `<import file="custom_rules.xml" optional="true" />` 导入定制构建文件(可选)，需要我们在当前目录下自定义。可定义target列表如下，后面的内容会介绍如何使用：
 
-> -pre-build<br>
+> -pre-build **因ant release过程中不会去编译jni文件，所以我们可以在这里执行ndk-build编译jni文件**，例如：<br>
+```
+<target name="-pre-build" >
+    <!-- delete temp dir -->
+    <delete dir="bin" includeEmptyDirs="true" />
+    <delete dir="gen" includeEmptyDirs="true" />
+    <delete dir="obj" includeEmptyDirs="true" />
+    <delete dir="libs/armeabi" includeEmptyDirs="true" />
+    <!-- run ndk-build.cmd and check result -->
+    <exec executable="ndk-build.cmd" failonerror="true" />
+</target>
+```
 > -pre-compile<br>
 > -post-compile<br>
 > -post-package<br>
